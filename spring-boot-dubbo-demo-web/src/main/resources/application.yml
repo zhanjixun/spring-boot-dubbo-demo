@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-boot-dubbo-demo-web
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+server:
+  port: 8080
