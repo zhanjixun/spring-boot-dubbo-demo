@@ -1,3 +1,12 @@
+spring:
+  application:
+    name: spring-boot-dubbo-demo-biz
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_demo?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: root
+    password: 123456
+
 dubbo:
   protocol:
     name: dubbo
@@ -7,8 +16,10 @@ dubbo:
     file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
   scan:
     base-packages: com.github.zhanjixun.**.service
-spring:
-  application:
-    name: spring-boot-dubbo-demo-biz
+
 server:
   port: 8081
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
